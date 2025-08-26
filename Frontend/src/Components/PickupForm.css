@@ -1,0 +1,70 @@
+.pickform {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.pickform:hover {
+  transform: translateY(-2px);
+}
+
+.pickinput {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+
+.pickinput:focus {
+  border-color: #2563eb; 
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+
+.pickbtn {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease-in-out;
+}
+
+.pickbtn:hover {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}
+
+.pickbtn:active {
+  background: #1e40af;
+  transform: scale(0.98);
+}
+
+
+@media (max-width: 600px) {
+  .pickform {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .pickinput,
+  .pickbtn {
+    font-size: 14px;
+  }
+}

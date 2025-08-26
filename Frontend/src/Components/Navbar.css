@@ -1,0 +1,59 @@
+.navmain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #74ebd5, #9face6); /* soft gradient */
+  border-bottom: 2px solid #e4e6eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.h1nav {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+
+.divoptions {
+  display: flex;
+  gap: 24px;
+}
+
+
+.divoptions a {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  padding: 6px 4px;
+  transition: color 0.3s ease;
+}
+
+
+.divoptions a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+  font-weight: bold;
+}
+
+
+.divoptions a:hover {
+  color: #222; 
+}
+
+.divoptions a:hover::after {
+  width: 100%;
+}
