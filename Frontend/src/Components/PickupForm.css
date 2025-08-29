@@ -1,70 +1,105 @@
-.pickform {
+.pickup-container {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 28px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease-in-out;
-}
-
-.pickform:hover {
-  transform: translateY(-2px);
-}
-
-.pickinput {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1.5px solid #d1d5db;
-  border-radius: 10px;
-  font-size: 15px;
-  outline: none;
-  transition: all 0.2s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Adjust based on your header height */
+  background-color: #f0f2f5; /* Light background to make the form pop */
+  padding: 20px;
   box-sizing: border-box;
 }
 
-
-.pickinput:focus {
-  border-color: #2563eb; 
-  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+.pickform {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Increased max-width for a slightly wider form */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between form elements */
 }
 
+.form-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.picklabel {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.pickinput,
+.pickselect {
+  width: 100%;
+  padding: 12px 15px; /* Increased padding for better feel */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Slightly more rounded corners */
+  font-size: 1em;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't increase total width */
+}
+
+.pickinput:focus,
+.pickselect:focus {
+  border-color: #28a745; /* Green border on focus */
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2); /* Soft green shadow on focus */
+  outline: none;
+  background-color: #fff;
+}
+
+.helper-text {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: -10px; /* Bring it closer to the input field */
+  margin-bottom: 10px;
+  display: block; /* Ensures it takes full width */
+}
 
 .pickbtn {
-  background: #2563eb;
-  color: #ffffff;
-  padding: 12px;
+  background-color: #28a745; /* A vibrant green for the button */
+  color: white;
+  padding: 14px 20px;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1.1em;
   cursor: pointer;
-  transition: background 0.25s ease, transform 0.15s ease-in-out;
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 .pickbtn:hover {
-  background: #1d4ed8;
-  transform: scale(1.02);
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 .pickbtn:active {
-  background: #1e40af;
-  transform: scale(0.98);
+  transform: translateY(0);
+  background-color: #1e7e34; /* Even darker on active */
 }
 
+/* Specific styling for date and time inputs to align text */
+input[type="date"].pickinput,
+input[type="time"].pickinput {
+  appearance: none; /* Remove default browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
+/* Responsive adjustments */
 @media (max-width: 600px) {
   .pickform {
-    padding: 20px;
-    max-width: 95%;
-  }
-
-  .pickinput,
-  .pickbtn {
-    font-size: 14px;
+    padding: 25px;
+    margin: 0 15px; /* Add some margin on smaller screens */
   }
 }

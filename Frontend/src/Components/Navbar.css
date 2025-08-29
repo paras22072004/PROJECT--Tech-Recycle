@@ -1,59 +1,75 @@
+/* Navbar */
 .navmain {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 40px;
-  background: linear-gradient(135deg, #74ebd5, #9face6); /* soft gradient */
-  border-bottom: 2px solid #e4e6eb;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(rgba(15, 32, 39, 0.85), rgba(44, 83, 100, 0.85)),
+              url('https://media.istockphoto.com/id/1474811739/photo/children-hands-and-plastic-bottles-in-beach-waste-management-community-service-or-climate.jpg?s=612x612&w=0&k=20&c=GIO7lZmWC0vzNYA5KhVlw_MqS_pGWQVG7HBBMaurx4M=') no-repeat center center/cover;
+  color: white;
+
 }
 
-
+/* Logo */
 .h1nav {
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
   letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 255, 128, 0.6);
 }
 
-
+/* Nav links */
 .divoptions {
   display: flex;
-  gap: 24px;
+  gap: 30px;
 }
-
 
 .divoptions a {
-  position: relative;
   text-decoration: none;
-  font-size: 16px;
+  color: #f5f5f5;
+  font-size: 1.1rem;
   font-weight: 500;
-  color: black;
-  padding: 6px 4px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
-
-
-.divoptions a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #fff;
-  transition: width 0.3s ease;
-  font-weight: bold;
-}
-
 
 .divoptions a:hover {
-  color: #222; 
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffeb3b;
+  transform: translateY(-2px);
 }
 
-.divoptions a:hover::after {
-  width: 100%;
+/* Responsive */
+@media (max-width: 768px) {
+  .navmain {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .divoptions {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .divoptions a {
+    width: 100%;
+    text-align: left;
+  }
 }
+
+
+
+

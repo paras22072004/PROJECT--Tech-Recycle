@@ -1,134 +1,80 @@
-.reqbtn2 {
-  background: #22c55e; 
-  color: white;
+/* Main Container */
+.pickup-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.reqbtn2:hover {
-  background: #16a34a;
-} */
-
-
-.reqdiv1 {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+/* Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
 }
 
-.reqdiv1:hover {
-  transform: scale(1.02);
-}
-
-.reqdiv1 p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-}
-
-.reqdiv2 {
-  margin-top: 12px;
+/* Form */
+.pickform {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.reqbtn1, .reqbtn2 {
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background 0.3s;
+/* Labels */
+.picklabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 2px;
 }
 
-.reqbtn1 {
+/* Inputs & Select */
+.pickinput {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.pickinput:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* Helper text */
+.helper-text {
+  font-size: 12px;
+  color: #777;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+/* Button */
+.pickbtn {
   background: #4caf50;
   color: white;
-}
-
-.reqbtn1:hover {
-  background: #388e3c;
-}
-
-.reqbtn2 {
-  background: #2196f3;
-  color: white;
-}
-
-.reqbtn2:hover {
-  background: #1565c0;
-}
-
-
-.reqdiv1 {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px 24px;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.reqdiv1:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
-}
-
-
-.req-details p {
-  margin: 6px 0;
-  font-size: 15px;
-  color: #444;
-}
-
-.req-details b {
-  color: #2b6777;
-}
-
-
-.reqdiv2 {
-  display: flex;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-
-.reqdiv2 button {
-  flex: 1;
-  padding: 10px 14px;
   border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  color: #fff;
+  transition: 0.3s ease;
 }
 
-
-.reqbtn1 {
-  background: #1e90ff; 
+.pickbtn:hover {
+  background: #45a049;
 }
 
-.reqbtn2 {
-  background: #28a745; 
-}
-
-.reqbtn3 {
-  background: #dc3545; 
-}
-
-
-.reqdiv2 button:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  .reqdiv1 {
-    padding: 16px;
-  }
-  .reqdiv2 {
-    flex-direction: column;
+/* Responsive */
+@media (max-width: 500px) {
+  .pickup-container {
+    margin: 20px;
+    padding: 15px;
   }
 }
