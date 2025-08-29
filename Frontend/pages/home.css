@@ -1,7 +1,7 @@
-/* 🌿 Import Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700;900&display=swap');
 
-/* 🎨 Color Variables */
+
 :root {
   --green: #27ae60;
   --light-green: #2ecc71;
@@ -14,7 +14,7 @@
   --dark: #1a1a1a;
 }
 
-/* 🌍 Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -162,7 +162,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #00e676; /* eco-green shade */
+  color: #00e676; 
   text-shadow: 0 0 10px rgba(0, 230, 118, 0.6);
 }
 
@@ -192,7 +192,7 @@ body {
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 10px;
-  color: #ffeb3b; /* bright yellow highlight */
+  color: #ffeb3b; 
   text-shadow: 0 0 15px rgba(255, 235, 59, 0.7);
 }
 
@@ -202,7 +202,7 @@ body {
   color: #e0e0e0;
 }
 
-/* Fade In Effect */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -232,7 +232,7 @@ body {
   }
   
   .stats > div {
-    width: 80%; /* Make boxes a bit wider on mobile */
+    width: 80%; 
     max-width: 300px;
   }
 }

@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 60px); /* Adjust based on your header height */
-   /* Light background to make the form pop */
+  min-height: calc(100vh - 60px); 
   padding: 20px;
   box-sizing: border-box;
 }
@@ -14,10 +13,10 @@
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px; /* Increased max-width for a slightly wider form */
+  max-width: 450px; 
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Spacing between form elements */
+  gap: 15px; 
 }
 
 .form-title {
@@ -38,20 +37,20 @@
 .pickinput,
 .pickselect {
   width: 100%;
-  padding: 12px 15px; /* Increased padding for better feel */
+  padding: 12px 15px; 
   border: 1px solid #ddd;
-  border-radius: 8px; /* Slightly more rounded corners */
+  border-radius: 8px;
   font-size: 1em;
   color: #333;
   background-color: #f9f9f9;
   transition: all 0.3s ease;
-  box-sizing: border-box; /* Ensures padding doesn't increase total width */
+  box-sizing: border-box; 
 }
 
 .pickinput:focus,
 .pickselect:focus {
-  border-color: #28a745; /* Green border on focus */
-  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2); /* Soft green shadow on focus */
+  border-color: #28a745; 
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2); 
   outline: none;
   background-color: #fff;
 }
@@ -59,44 +58,44 @@
 .helper-text {
   font-size: 0.8em;
   color: #777;
-  margin-top: -10px; /* Bring it closer to the input field */
+  margin-top: -10px; 
   margin-bottom: 10px;
-  display: block; /* Ensures it takes full width */
+  display: block; 
 }
 
 .pickbtn {
-  background-color: #28a745; /* A vibrant green for the button */
+  background-color: #28a745;
   color: white;
   padding: 14px 20px;
   border: none;
   border-radius: 8px;
   font-size: 1.1em;
   cursor: pointer;
-  margin-top: 20px; /* Space above the button */
+  margin-top: 20px; 
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
 .pickbtn:hover {
-  background-color: #218838; /* Darker green on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #218838;
+  transform: translateY(-2px); 
 }
 
 .pickbtn:active {
   transform: translateY(0);
-  background-color: #1e7e34; /* Even darker on active */
+  background-color: #1e7e34;
 }
 
-/* Specific styling for date and time inputs to align text */
+
 input[type="date"].pickinput,
 input[type="time"].pickinput {
-  appearance: none; /* Remove default browser styling */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   .pickform {
     padding: 25px;

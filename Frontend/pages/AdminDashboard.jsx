@@ -21,7 +21,7 @@ function AdminDashboard() {
     <div className="divadmin">
       <h2 className="adh1">⚙️ Admin Dashboard</h2>
 
-      {/* Search Bar */}
+  
       <input
         type="text"
         placeholder="Search by User..."

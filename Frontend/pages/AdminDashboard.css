@@ -1,8 +1,8 @@
-/* AdminDashboard.css */
+
 .divadmin {
   min-height: 100vh;
   padding: 30px;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark premium gradient */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
@@ -12,7 +12,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
-  color: #00f2fe; /* Premium cyan glow */
+  color: #00f2fe; 
   text-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
   letter-spacing: 2px;
 }
@@ -50,7 +50,6 @@
   letter-spacing: 1px;
 }
 
-/* Request Card wrapper */
 .divadmin .request-card {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
