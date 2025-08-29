@@ -1,50 +1,140 @@
+/* Custom properties for a cohesive theme */
+:root {
+  --background-color: #e0f2fe; /* Light blue */
+  --card-bg-color: rgba(255, 255, 255, 0.2);
+  --card-border-color: rgba(255, 255, 255, 0.4);
+  --primary-color: #0c4a6e; /* Dark blue */
+  --secondary-color: #166534; /* Dark green */
+  --text-color: #333;
+  --box-shadow-inset: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+body {
+  background-color: var(--background-color);
+  background-image: linear-gradient(135deg, #a5b4fc 0%, #d1fae5 100%);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  
+}
+
 .userdiv {
-  padding: 20px;
+  background: var(--card-bg-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid var(--card-border-color);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  width: 100%;
+  margin: 0px;
 }
 
 .userh2 {
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
-  color: #2e7d32;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Glassmorphic Summary Cards */
 .summary {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 25px;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .summaryCard {
-  flex: 1;
-  background: #e8f5e9;
-  padding: 15px;
-  border-radius: 12px;
+  flex: 1 1 200px;
+  background-color: var(--card-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border-color);
+  border-radius: 15px;
+  padding: 25px;
   text-align: center;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
-  transition: transform 0.2s;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .summaryCard:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .summaryCard h3 {
-  font-size: 1.8rem;
-  color: #1b5e20;
-  margin: 0;
+  font-size: 3rem;
+  margin: 0 0 5px;
+  background: linear-gradient(45deg, var(--secondary-color), #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
 }
 
 .summaryCard p {
-  margin: 5px 0 0;
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
+/* Glowing buttons */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
 
+.controls button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-inset);
+}
+
+.controls button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Glowing effect on hover */
+.controls button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.7s ease;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+}
+
+.controls button:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Placeholder for RequestCard, assuming it has a sleek design */
 .reqList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }

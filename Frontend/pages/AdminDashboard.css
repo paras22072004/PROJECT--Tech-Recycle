@@ -1,14 +1,67 @@
+/* AdminDashboard.css */
 .divadmin {
-  padding: 40px 20px;
   min-height: 100vh;
-  background: #f4f8fb; 
+  padding: 30px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark premium gradient */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
 }
 
 .adh1 {
-  text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #2b6777;
+  text-align: center;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  color: #00f2fe; /* Premium cyan glow */
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+  letter-spacing: 2px;
+}
+
+.search-bar {
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 12px 20px;
+  width: 50%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+  transition: 0.3s;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.7);
+}
+
+.no-requests-msg {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Request Card wrapper */
+.divadmin .request-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  margin: 15px auto;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divadmin .request-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
 }
